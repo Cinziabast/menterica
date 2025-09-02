@@ -4,14 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mente Rica – Enlaces oficiales</title>
-  <meta name="description" content="Mente Rica es un espacio dedicado a transformar tu relación con el dinero. Encuentra hábitos financieros, consejos de ahorro y estrategias de mentalidad millonaria.">
+  <meta name="description" content="Mente Rica: hábitos financieros, ahorro inteligente y mentalidad de crecimiento para transformar tu relación con el dinero.">
   <link rel="icon" href="logo.png">
-
-  <!-- Open Graph (opcional: añade cover.jpg si lo tienes) -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Mente Rica – Enlaces oficiales">
-  <meta property="og:description" content="Hábitos financieros, ahorro inteligente y mentalidad de crecimiento.">
-  <meta property="og:image" content="cover.jpg">
   <meta name="theme-color" content="#6E56CF">
 
   <style>
@@ -36,31 +30,30 @@
       padding:24px; overflow:hidden;
     }
 
+    /* HERO */
     .hero{display:flex; gap:18px; align-items:center}
     .logo{width:90px; height:90px; border-radius:16px; flex:0 0 auto; object-fit:cover; box-shadow:0 10px 30px rgba(124,107,242,.35)}
     .title{margin:0; font-size:28px; line-height:1.15}
-    .tagline{margin:2px 0 0; color:var(--muted)}
+    .tagline{margin:6px 0 0; color:var(--muted)}
+    .hero-cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
 
-    .about{display:flex; gap:16px; align-items:center}
-    .about-avatar{width:72px; height:72px; border-radius:16px; object-fit:cover; box-shadow:0 8px 24px rgba(0,0,0,.25)}
-    .about p{margin:0; color:var(--txt)}
-
-    .features-list{list-style:none; margin:0; padding:0; display:grid; gap:10px; color:var(--txt); font-size:16px}
-    .features-list li{
-      background:rgba(255,255,255,.05); padding:10px 14px; border-radius:12px;
-      border:1px solid rgba(255,255,255,.12); box-shadow:0 4px 12px rgba(0,0,0,.15);
-    }
-
-    .grid{display:grid; gap:12px}
-    @media (min-width:640px){ .grid{grid-template-columns:1fr 1fr} }
-
+    /* Botones */
     .btn{
-      display:flex; align-items:center; gap:12px; padding:16px 18px; border-radius:14px;
+      display:flex; align-items:center; gap:12px; padding:14px 16px; border-radius:14px;
       background:linear-gradient(90deg,rgba(124,107,242,.25),rgba(74,192,255,.25));
       border:1px solid rgba(255,255,255,.12); color:var(--txt); text-decoration:none; font-weight:700;
       transition:.25s transform,.25s box-shadow;
     }
     .btn:hover{transform:translateY(-2px); box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .btn.primary{background:linear-gradient(90deg,var(--ac1),var(--ac2)); color:#071226; border:none}
+    .btn.ghost{background:transparent; border:1px solid rgba(255,255,255,.25)}
+
+    /* Lista de valor */
+    .features-list{list-style:none; margin:0; padding:0; display:grid; gap:10px; color:var(--txt); font-size:16px}
+    .features-list li{
+      background:rgba(255,255,255,.05); padding:10px 14px; border-radius:12px;
+      border:1px solid rgba(255,255,255,.12); box-shadow:0 4px 12px rgba(0,0,0,.15);
+    }
 
     /* Video 9:16 responsive */
     .video-wrap{
@@ -70,37 +63,63 @@
     }
     .video-wrap iframe{position:absolute; inset:0; width:100%; height:100%}
 
+    /* Grid de links */
+    .grid{display:grid; gap:12px}
+    @media (min-width:640px){ .grid{grid-template-columns:1fr 1fr} }
+
+    /* Social proof */
+    .socialproof .stats{
+      display:grid; gap:12px; margin-bottom:12px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width:640px){ .socialproof .stats{ grid-template-columns:1fr 1fr 1fr } }
+    .socialproof .stat{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:14px; padding:14px; text-align:center;
+      box-shadow:0 6px 18px rgba(0,0,0,.16);
+    }
+    .socialproof .stat-number{
+      font-weight:900; font-size:22px; line-height:1; margin-bottom:6px;
+      background:linear-gradient(90deg, var(--ac1), var(--ac2));
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+    }
+    .socialproof .stat-label{ color:var(--muted); font-size:13px }
+    .socialproof .testimonials{
+      list-style:none; margin:0; padding:0; display:grid; gap:10px;
+    }
+    .socialproof .testimonials li{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:12px; padding:12px;
+    }
+    .socialproof .testimonials p{ margin:0 0 6px; font-style:italic }
+    .socialproof .user{ color:var(--muted); font-size:13px }
+
     footer{text-align:center; color:var(--muted); font-size:13px}
   </style>
 </head>
 <body>
   <main class="wrap">
 
-    <!-- Hero -->
-    <section class="card">
+    <!-- HERO (promesa + CTAs) -->
+    <section class="card" id="inicio">
       <div class="hero">
         <img src="logo.png" alt="Mente Rica" class="logo" />
         <div>
           <h1 class="title">Mente Rica</h1>
-          <p class="tagline">Hábitos financieros • Ahorro inteligente • Mentalidad de crecimiento</p>
+          <p class="tagline">Transforma tu relación con el dinero en 30 s al día · Hábitos • Ahorro • Mindset</p>
+          <div class="hero-cta">
+            <a href="#video" class="btn primary">🎥 Ver último video</a>
+            <a href="#links" class="btn ghost">🔗 Mis plataformas</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Sobre Mente Rica -->
-    <section class="card about">
-      <img src="logo.png" alt="Mente Rica Logo" class="about-avatar">
-      <div>
-        <h2>Sobre Mente Rica</h2>
-        <p><strong>Mente Rica</strong> es un espacio dedicado a transformar tu relación con el dinero.
-        Aquí compartes hábitos financieros simples, consejos de ahorro y estrategias de mentalidad
-        para lograr claridad, disciplina y libertad financiera paso a paso.</p>
-      </div>
-    </section>
-
     <!-- Lo que encontrarás aquí -->
-    <section class="card features">
-      <h2 style="margin-top:0">Lo que encontrarás aquí</h2>
+    <section class="card">
+      <h2 style="margin:0 0 10px">Lo que encontrarás aquí</h2>
       <ul class="features-list">
         <li>✅ Hábitos financieros simples que puedes aplicar desde hoy</li>
         <li>✅ Consejos de ahorro inteligentes para cuidar tu dinero</li>
@@ -110,8 +129,8 @@
     </section>
 
     <!-- Último video -->
-    <section class="card video">
-      <h2 style="margin-top:0">🎥 Último video</h2>
+    <section class="card" id="video">
+      <h2 style="margin:0 0 10px">🎥 Último video</h2>
       <div class="video-wrap">
         <iframe
           src="https://www.youtube.com/embed/fTvDnzO43Qo?rel=0&modestbranding=1&playsinline=1"
@@ -123,23 +142,102 @@
     </section>
 
     <!-- Enlaces -->
-    <section class="card grid">
+    <section class="card grid" id="links">
       <a class="btn" href="https://www.instagram.com/menteriica1/" target="_blank" rel="noopener">📸 Instagram</a>
       <a class="btn" href="https://www.tiktok.com/@ciintiia7" target="_blank" rel="noopener">🎵 TikTok</a>
       <a class="btn" href="https://www.youtube.com/@Mente_Rica.1" target="_blank" rel="noopener">▶️ YouTube</a>
       <a class="btn" href="https://www.facebook.com/SoyMenteRica/" target="_blank" rel="noopener">📘 Facebook</a>
     </section>
 
+    <!-- Resultados de la comunidad (DINÁMICO) -->
+    <section class="card socialproof" aria-labelledby="sp-title">
+      <h2 id="sp-title" style="margin:0 0 12px">Resultados de la comunidad</h2>
+      <div id="stats" class="stats"></div>
+      <ul id="testimonials" class="testimonials"></ul>
+    </section>
+
     <!-- CTA final -->
     <section class="card">
       <p>Únete al reto de 30 días para gastar un 10% menos y ganar claridad financiera.</p>
-      <a class="btn" href="https://TU-LINK-DEL-FORM" target="_blank" rel="noopener">🚀 Unirme al reto</a>
+      <a class="btn primary" href="https://TU-LINK-DEL-FORM" target="_blank" rel="noopener">🚀 Unirme al reto</a>
     </section>
 
     <footer>© <span id="y"></span> Mente Rica · Hecho con ♥ en GitHub Pages</footer>
   </main>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <!-- JSON editable con tus cifras y testimonios -->
+  <script id="social-data" type="application/json">
+  {
+    "metrics": [
+      {"label":"Reels guardados", "value": 1200},
+      {"label":"Comentarios “EMPIEZO”", "value": 480},
+      {"label":"Reproducciones", "value": 35000}
+    ],
+    "testimonials": [
+      {"quote":"Con el reto del -10% empecé a ver resultados en una semana.", "user":"— Laura G."},
+      {"quote":"Tus recordatorios me ayudaron a controlar las compras impulsivas.", "user":"— Marcos P."},
+      {"quote":"Claridad y hábitos simples. Ya ahorro más cada mes.", "user":"— Ana R."}
+    ]
+  }
+  </script>
+
+  <!-- JS: pinta datos y anima contadores -->
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    const dataEl = document.getElementById('social-data');
+    const {metrics, testimonials} = JSON.parse(dataEl.textContent);
+
+    // Pintar métricas
+    const statsEl = document.getElementById('stats');
+    metrics.forEach((m, i) => {
+      const card = document.createElement('div');
+      card.className = 'stat';
+      card.innerHTML = `
+        <div class="stat-number" data-target="${m.value}" id="stat-${i}">0</div>
+        <div class="stat-label">${m.label}</div>
+      `;
+      statsEl.appendChild(card);
+    });
+
+    // Pintar testimonios
+    const tList = document.getElementById('testimonials');
+    testimonials.forEach(t => {
+      const li = document.createElement('li');
+      li.innerHTML = `<p>“${t.quote}”</p><span class="user">${t.user}</span>`;
+      tList.appendChild(li);
+    });
+
+    // Animación contador
+    function countUp(el, to, duration = 1200){
+      const start = 0;
+      const startTime = performance.now();
+      function tick(now){
+        const p = Math.min((now - startTime) / duration, 1);
+        const val = Math.floor(start + (to - start) * (1 - Math.pow(1 - p, 3))); // easeOutCubic
+        el.textContent = Intl.NumberFormat('es-ES', {notation: to>=10000 ? 'compact' : 'standard'}).format(val);
+        if(p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    // Disparar cuando el bloque entra en viewport
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          metrics.forEach((m, i) => {
+            const el = document.getElementById(`stat-${i}`);
+            const already = el.getAttribute('data-animated');
+            if(!already){
+              countUp(el, m.value);
+              el.setAttribute('data-animated', '1');
+            }
+          });
+          io.disconnect(); // una sola vez
+        }
+      });
+    }, {threshold: 0.3});
+    io.observe(document.querySelector('.socialproof'));
+  </script>
 </body>
 </html>
-
