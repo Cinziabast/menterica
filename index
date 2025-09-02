@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mente Rica – Enlaces oficiales</title>
+  <meta name="description" content="Mente Rica es tu espacio para transformar la forma en que piensas y manejas el dinero. Descubre hábitos simples, tips de ahorro y estrategias de mentalidad millonaria. Sígueme en todas mis redes y empieza hoy a construir tu libertad financiera.">
+  <link rel="icon" href="logo.png">
+
+  <style>
+    :root{
+      --bg1:#0f1023;
+      --bg2:#1d1443;
+      --ac1:#7c6bf2;
+      --ac2:#4ac0ff;
+      --txt:#eef0ff;
+      --muted:#adb2d6;
+      --card: rgba(255,255,255,.08);
+      --card-border: rgba(255,255,255,.15);
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; color:var(--txt);
+      font:500 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+      background: linear-gradient(160deg, var(--bg1), var(--bg2));
+      display:grid; place-items:center; padding:28px;
+    }
+    .wrap{width:min(820px,100%); display:grid; gap:22px}
+    .card{
+      background:var(--card); border:1px solid var(--card-border);
+      box-shadow:var(--shadow); border-radius:var(--radius);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      padding:24px; overflow:hidden;
+    }
+    .hero{display:flex; gap:18px; align-items:center}
+    .logo{
+      width:90px;
+      height:90px;
+      border-radius:16px;
+      flex:0 0 auto;
+      object-fit:cover;
+      box-shadow:0 10px 30px rgba(124,107,242,.35);
+    }
+    .title{margin:0; font-size:28px; line-height:1.15}
+    .tagline{margin:2px 0 0; color:var(--muted)}
+    .grid{display:grid; gap:12px}
+    @media (min-width:640px){ .grid{grid-template-columns:1fr 1fr} }
+    .btn{
+      display:flex; align-items:center; gap:12px;
+      padding:16px 18px; border-radius:14px;
+      background:linear-gradient(90deg, rgba(124,107,242,.25), rgba(74,192,255,.25));
+      border:1px solid rgba(255,255,255,.12);
+      color:var(--txt); text-decoration:none; font-weight:700;
+      transition:.25s transform, .25s box-shadow;
+    }
+    .btn:hover{ transform: translateY(-2px); box-shadow:0 10px 30px rgba(0,0,0,.25) }
+    .btn svg{width:22px; height:22px}
+    footer{ text-align:center; color:var(--muted); font-size:13px }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+
+    <!-- Hero con logo -->
+    <section class="card">
+      <div class="hero">
+        <img src="logo.png" alt="Mente Rica" class="logo" />
+        <div>
+          <h1 class="title">Mente Rica</h1>
+          <p class="tagline">Hábitos financieros • Ahorro inteligente • Mentalidad de crecimiento</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Botones -->
+    <section class="card grid">
+      <a class="btn" href="https://instagram.com/TUUSUARIO" target="_blank">📸 Instagram</a>
+      <a class="btn" href="https://tiktok.com/@TUUSUARIO" target="_blank">🎵 TikTok</a>
+      <a class="btn" href="https://youtube.com/@TUUSUARIO" target="_blank">▶️ YouTube</a>
+      <a class="btn" href="https://facebook.com/TUUSUARIO" target="_blank">📘 Facebook</a>
+      <a class="btn" href="mailto:tucorreo@dominio.com" target="_blank">📩 Newsletter</a>
+      <a class="btn" href="https://wa.me/34TUNUMERO" target="_blank">💬 WhatsApp</a>
+    </section>
+
+    <!-- CTA final -->
+    <section class="card">
+      <p>Únete al reto de 30 días para gastar un 10% menos y ganar claridad financiera.</p>
+      <a class="btn" href="https://TU-LINK-DEL-FORM" target="_blank">🚀 Unirme al reto</a>
+    </section>
+
+    <footer>© <span id="y"></span> Mente Rica · Hecho con ♥ en GitHub Pages</footer>
+  </main>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
